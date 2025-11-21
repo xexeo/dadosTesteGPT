@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rolador de Dados D&D</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Rolador de Dados</h1>
+    <p>Envie rolagens no formato clássico do D&D, como <code>4d6kh3</code> ou <code>2d20kl1</code>.</p>
+  </header>
+
+  <main>
+    <section class="preset-rolls">
+      <h2>Rolagens Rápidas</h2>
+      <div class="buttons">
+        <button data-expression="1d4">1d4</button>
+        <button data-expression="1d6">1d6</button>
+        <button data-expression="1d8">1d8</button>
+        <button data-expression="1d10">1d10</button>
+        <button data-expression="1d12">1d12</button>
+        <button data-expression="1d20">1d20</button>
+        <button data-expression="2d6">2d6</button>
+        <button data-expression="4d6kh3">Atributo (4d6kh3)</button>
+        <button data-expression="2d20kh1">Vantagem</button>
+        <button data-expression="2d20kl1">Desvantagem</button>
+      </div>
+    </section>
+
+    <section class="custom-roll">
+      <h2>Rolagem Personalizada</h2>
+      <form id="custom-form">
+        <label for="expression">Expressão:</label>
+        <input type="text" id="expression" name="expression" placeholder="Ex: 9d4-4" required>
+        <button type="submit">Rolar</button>
+      </form>
+    </section>
+
+    <section class="result" id="result" aria-live="polite"></section>
+  </main>
+
+  <footer>
+    <p>API REST simples para rolagens D&D.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
